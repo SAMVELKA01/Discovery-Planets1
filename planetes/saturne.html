@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saturne | Discovery Planets</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body class="bg-space-deep text-slate-100 font-outfit overflow-x-hidden pt-24">
+    <div class="fixed inset-0 pointer-events-none z-0">
+        <div id="stars" class="absolute inset-0"></div>
+    </div>
+    <nav class="fixed top-0 w-full z-50 nav-scrolled px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="../index.html"
+                class="flex items-center gap-2 font-unbounded font-bold text-xl uppercase tracking-tighter">Discovery
+                <span class="text-indigo-400">Planets</span></a>
+            <div class="hidden md:flex gap-8 items-center font-medium uppercase text-sm tracking-widest">
+                <a href="../index.html" class="hover:text-cyan-400 transition-colors">Accueil</a>
+                <a href="../planetes.html" class="hover:text-cyan-400 transition-colors text-cyan-400">Planètes</a>
+                <a href="../about.html" class="hover:text-cyan-400 transition-colors">À Propos</a>
+                <a href="../contact.html"
+                    class="hover:text-cyan-400 transition-colors px-6 py-2 bg-indigo-600 rounded-full">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <header class="relative py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="reveal">
+                <span
+                    class="inline-block py-1 px-4 mb-4 rounded-full border border-yellow-500/30 bg-yellow-500/10 text-yellow-400 text-[10px] font-bold tracking-[0.3em] uppercase">6ème
+                    Planète | Géante Gazeuse</span>
+                <h1 class="text-6xl md:text-8xl font-unbounded font-bold mb-6 glow-text">Saturne</h1>
+                <p class="text-slate-400 text-lg leading-relaxed mb-8">La perle du système solaire, célèbre pour son
+                    système d'anneaux complexe et majestueux.</p>
+            </div>
+             <div class="reveal">
+                <img src="../images/saturne.jpg" alt="Saturne" class="w-full h-auto rounded-3xl shadow-lg">
+            </div>
+        </div>
+    </header>
+    <main class="max-w-7xl mx-auto px-6 py-20 space-y-20">
+        <section class="reveal">
+            <h2 class="text-3xl font-unbounded font-bold mb-8">Informations Clés</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="glass-card p-6 rounded-2xl text-center">
+                    <p class="text-xs text-slate-500 uppercase mb-2">Diamètre</p>
+                    <p class="text-2xl font-bold">116 460 km</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center">
+                    <p class="text-xs text-slate-500 uppercase mb-2">Distance</p>
+                    <p class="text-2xl font-bold">1.4 Md km</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center">
+                    <p class="text-xs text-slate-500 uppercase mb-2">Anneaux</p>
+                    <p class="text-2xl font-bold">7 principaux</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center">
+                    <p class="text-xs text-slate-500 uppercase mb-2">Lunes</p>
+                    <p class="text-2xl font-bold">146 connues</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <section class="max-w-7xl mx-auto px-6 py-20">
+        <div class="flex justify-between items-center border-t border-white/5 pt-12">
+            <a href="jupiter.html" class="flex flex-col items-start group"><span
+                    class="text-xs font-bold uppercase text-slate-500 mb-2">Précédent</span><span
+                    class="text-xl font-unbounded font-bold group-hover:text-indigo-400 transition-colors">←
+                    Jupiter</span></a>
+            <a href="uranus.html" class="flex flex-col items-end group"><span
+                    class="text-xs font-bold uppercase text-slate-500 mb-2">Suivant</span><span
+                    class="text-xl font-unbounded font-bold group-hover:text-indigo-400 transition-colors">Uranus
+                    →</span></a>
+        </div>
+    </section>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 200; i++) {
+            const star = document.createElement('div');
+            star.className = 'absolute bg-white rounded-full';
+            const size = Math.random() * 2;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.opacity = Math.random();
+            starsContainer.appendChild(star);
+        }
+    </script>
+</body>
+
+</html>

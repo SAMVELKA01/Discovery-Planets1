@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;700&family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --space-deep: #050614;
+    --space-nebula: #0d0f2b;
+    --space-accent: #6366f1;
+    --space-cyan: #22d3ee;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+}
+
+body {
+    background-color: var(--space-deep);
+    color: var(--text-primary);
+    font-family: 'Outfit', sans-serif;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .font-unbounded {
+    font-family: 'Unbounded', cursive;
+}
+
+/* Custom Utilities for Glassmorphism */
+.glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-card {
+    background: rgba(13, 15, 43, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+    border-color: rgba(99, 102, 241, 0.5);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.3);
+}
+
+/* Glow Effects */
+.glow-text {
+    text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+}
+
+.glow-border {
+    box-shadow: 0 0 15px rgba(34, 211, 238, 0.3);
+}
+
+/* Base Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--space-deep);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--space-accent);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--space-cyan);
+}
+
+/* Navbar Blur on Scroll */
+.nav-scrolled {
+    background: rgba(5, 6, 20, 0.8);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Planètes | Discovery Planets</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        space: {
+                            deep: '#050614',
+                            nebula: '#0d0f2b',
+                            accent: '#6366f1',
+                            cyan: '#22d3ee',
+                        }
+                    },
+                    fontFamily: {
+                        unbounded: ['Unbounded', 'cursive'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-space-deep text-slate-100 font-outfit overflow-x-hidden pt-24">
+
+    <!-- Stars Background -->
+    <div class="fixed inset-0 pointer-events-none z-0">
+        <div id="stars" class="absolute inset-0"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 nav-scrolled px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div
+                    class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-cyan-400 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+                    </svg>
+                </div>
+                <span class="font-unbounded font-bold text-xl tracking-tighter uppercase">Discovery <span
+                        class="text-indigo-400">Planets</span></span>
+            </a>
+            <div class="hidden md:flex gap-8 items-center font-medium uppercase text-sm tracking-widest">
+                <a href="index.html" class="hover:text-cyan-400 transition-colors">Accueil</a>
+                <a href="planetes.html"
+                    class="hover:text-cyan-400 transition-colors border-b-2 border-indigo-500 text-cyan-400">Planètes</a>
+                <a href="about.html" class="hover:text-cyan-400 transition-colors">À Propos</a>
+                <a href="contact.html"
+                    class="hover:text-cyan-400 transition-colors px-6 py-2 bg-indigo-600 rounded-full hover:bg-indigo-500 transition-all">Contact</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main class="relative z-10 max-w-7xl mx-auto px-6 py-12">
+        <header class="mb-16 reveal">
+            <h1 class="text-4xl md:text-6xl font-unbounded font-bold mb-4">Le Système <span
+                    class="text-cyan-400">Solaire</span></h1>
+            <p class="text-slate-400 max-w-2xl text-lg">Parcourez les huit mondes qui gravitent autour de notre étoile.
+                Chaque planète possède son identité, son histoire et ses mystères.</p>
+        </header>
+
+        <!-- Planets Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Mercure -->
+            <a href="planetes/mercure.html" class="glass-card rounded-3xl overflow-hidden group reveal">
+                <div
+                    class="h-48 bg-gradient-to-br from-slate-700 to-slate-900 relative overflow-hidden group rounded-2xl">
+                    <img class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105 contrast-105 saturate-110"
+                        src="images/mercure3.jpg" alt="Mercure">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+                </div>
+
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <h2 class="text-2xl font-unbounded font-bold">Mercure</h2>
+                        <span
+                            class="px-3 py-1 bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-[10px] font-bold uppercase rounded-full tracking-widest">N°
+                            1</span>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-6">La plus petite planète et la plus proche du Soleil. Un monde
+                        de contrastes thermiques extrêmes.</p>
+                    <div class="grid grid-cols-2 gap-4 text-[10px] uppercase tracking-widest font-bold text-slate-500">
+                        <div>Type: <span class="text-white">Tellurique</span></div>
+                        <div>Distance: <span class="text-white">58 M km</span></div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Vénus -->
+            <a href="planetes/venus.html" class="glass-card rounded-3xl overflow-hidden group reveal delay-100">
+                <div
+                    class="h-48 bg-gradient-to-br from-slate-700 to-slate-900 relative overflow-hidden group rounded-2xl">
+                    <img class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105 contrast-105 saturate-110"
+                        src="images/venus.jpg" alt="Vénus">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+                </div>
+
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <h2 class="text-2xl font-unbounded font-bold">Vénus</h2>
+                        <span
+                            class="px-3 py-1 bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-[10px] font-bold uppercase rounded-full tracking-widest">N°
+                            2</span>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-6">Souvent appelée la "jumelle de la Terre" par sa taille, mais
+                        avec une atmosphère infernale.</p>
+                    <div class="grid grid-cols-2 gap-4 text-[10px] uppercase tracking-widest font-bold text-slate-500">
+                        <div>Type: <span class="text-white">Tellurique</span></div>
+                        <div>Distance: <span class="text-white">108 M km</span></div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Terre -->
+            <a href="planetes/terre.html" class="glass-card rounded-3xl overflow-hidden group reveal delay-200">
+                <div
+                    class="h-48 bg-gradient-to-br from-slate-700 to-slate-900 relative overflow-hidden group rounded-2xl">
+                    <img class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105 contrast-105 saturate-110"
+                        src="images/terre.jpg" alt="Terre">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+                </div>
+
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <h2 class="text-2xl font-unbounded font-bold">Terre</h2>
+                        <span
+                            class="px-3 py-1 bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-[10px] font-bold uppercase rounded-full tracking-widest">N°
+                            3</span>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-6">Notre foyer. La seule planète connue pour abriter la vie et
+                        possédant de l'eau liquide en surface.</p>
+                    <div class="grid grid-cols-2 gap-4 text-[10px] uppercase tracking-widest font-bold text-slate-500">
+                        <div>Type: <span class="text-white">Tellurique</span></div>
+                        <div>Distance: <span class="text-white">150 M km</span></div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Mars -->
+            <a href="planetes/mars.html" class="glass-card rounded-3xl overflow-hidden group reveal">
+                <div
+                    class="h-48 bg-gradient-to-br from-slate-700 to-slate-900 relative overflow-hidden group rounded-2xl">
+                    <img class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105 contrast-105 saturate-110"
+                        src="images/mars2.jpg" alt="Mars">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+                </div>
+
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <h2 class="text-2xl font-unbounded font-bold">Mars</h2>
+                        <span
+                            class="px-3 py-1 bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-[10px] font-bold uppercase rounded-full tracking-widest">N°
+                            4</span>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-6">La planète rouge. Un désert gelé qui fascine par son passé
+                        potentiellement habitable.</p>
+                    <div class="grid grid-cols-2 gap-4 text-[10px] uppercase tracking-widest font-bold text-slate-500">
+                        <div>Type: <span class="text-white">Tellurique</span></div>
+                        <div>Distance: <span class="text-white">228 M km</span></div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Jupiter -->
+            <a href="planetes/jupiter.html" class="glass-card rounded-3xl overflow-hidden group reveal delay-100">
+                <div
+                    class="h-48 bg-gradient-to-br from-slate-700 to-slate-900 relative overflow-hidden group rounded-2xl">
+                    <img class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105 contrast-105 saturate-110"
+                        src="images/jupiter.jpg" alt="Jupiter">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+                </div>
+
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <h2 class="text-2xl font-unbounded font-bold">Jupiter</h2>
+                        <span
+                            class="px-3 py-1 bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-[10px] font-bold uppercase rounded-full tracking-widest">N°
+                            5</span>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-6">Le roi des planètes. Une géante gazeuse si massive qu'elle
+                        domine tout le système solaire.</p>
+                    <div class="grid grid-cols-2 gap-4 text-[10px] uppercase tracking-widest font-bold text-slate-500">
+                        <div>Type: <span class="text-white">Géante Gazeuse</span></div>
+                        <div>Distance: <span class="text-white">778 M km</span></div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Saturne -->
+            <a href="planetes/saturne.html" class="glass-card rounded-3xl overflow-hidden group reveal delay-200">
+                <div
+                    class="h-48 bg-gradient-to-br from-slate-700 to-slate-900 relative overflow-hidden group rounded-2xl">
+                    <img class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105 contrast-105 saturate-110"
+                        src="images/saturne.jpg" alt="Saturne">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+                </div>
+
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <h2 class="text-2xl font-unbounded font-bold">Saturne</h2>
+                        <span
+                            class="px-3 py-1 bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-[10px] font-bold uppercase rounded-full tracking-widest">N°
+                            6</span>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-6">Célèbre pour son système d'anneaux spectaculaires, Saturne
+                        est une géante gazeuse légère.</p>
+                    <div class="grid grid-cols-2 gap-4 text-[10px] uppercase tracking-widest font-bold text-slate-500">
+                        <div>Type: <span class="text-white">Géante Gazeuse</span></div>
+                        <div>Distance: <span class="text-white">1.4 Md km</span></div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Uranus -->
+            <a href="planetes/uranus.html" class="glass-card rounded-3xl overflow-hidden group reveal">
+                <div
+                    class="h-48 bg-gradient-to-br from-slate-700 to-slate-900 relative overflow-hidden group rounded-2xl">
+                    <img class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105 contrast-105 saturate-110"
+                        src="images/uranus.jpg" alt="Uranus">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+                </div>
+
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <h2 class="text-2xl font-unbounded font-bold">Uranus</h2>
+                        <span
+                            class="px-3 py-1 bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-[10px] font-bold uppercase rounded-full tracking-widest">N°
+                            7</span>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-6">Une géante de glace à la rotation unique, basculée sur le
+                        côté. Un monde froid et mystérieux.</p>
+                    <div class="grid grid-cols-2 gap-4 text-[10px] uppercase tracking-widest font-bold text-slate-500">
+                        <div>Type: <span class="text-white">Géante de Glace</span></div>
+                        <div>Distance: <span class="text-white">2.9 Md km</span></div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Neptune -->
+            <a href="planetes/neptune.html" class="glass-card rounded-3xl overflow-hidden group reveal delay-100">
+                <div
+                    class="h-48 bg-gradient-to-br from-slate-700 to-slate-900 relative overflow-hidden group rounded-2xl">
+                    <img class="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105 contrast-105 saturate-110"
+                        src="images/neptune.jpg" alt="Neptune">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors"></div>
+                </div>
+                <div class="p-8">
+                    <div class="flex justify-between items-start mb-4">
+                        <h2 class="text-2xl font-unbounded font-bold">Neptune</h2>
+                        <span
+                            class="px-3 py-1 bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 text-[10px] font-bold uppercase rounded-full tracking-widest">N°
+                            8</span>
+                    </div>
+                    <p class="text-slate-400 text-sm mb-6">La planète la plus lointaine. Un monde bleu balayé par les
+                        vents les plus rapides du système solaire.</p>
+                    <div class="grid grid-cols-2 gap-4 text-[10px] uppercase tracking-widest font-bold text-slate-500">
+                        <div>Type: <span class="text-white">Géante de Glace</span></div>
+                        <div>Distance: <span class="text-white">4.5 Md km</span></div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-white/5 bg-space-deep relative z-10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div>
+                <span class="font-unbounded font-bold text-lg uppercase tracking-tighter">Discovery <span
+                        class="text-indigo-400">Planets</span></span>
+                <p class="text-slate-500 text-sm mt-2">© 2025 Discovery Planets - Exploration Scientifique.</p>
+            </div>
+            <div class="flex gap-8 text-sm uppercase tracking-widest text-slate-400">
+                <a href="index.html" class="hover:text-cyan-400 transition-colors">Accueil</a>
+                <a href="about.html" class="hover:text-cyan-400 transition-colors">À Propos</a>
+                <a href="contact.html" class="hover:text-cyan-400 transition-colors">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Simple Star Generator
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 200; i++) {
+            const star = document.createElement('div');
+            star.className = 'absolute bg-white rounded-full';
+            const size = Math.random() * 2;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.opacity = Math.random();
+            star.style.animation = `pulse ${Math.random() * 3 + 2}s infinite`;
+            starsContainer.appendChild(star);
+        }
+    </script>
+</body>
+
+</html>

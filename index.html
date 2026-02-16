@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discovery Planets | Explorez le Système Solaire</title>
+    <meta name="description" content="Découvrez les secrets des planètes du système solaire sur Discovery Planets. Un voyage éducatif et scientifique à travers l'espace.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        space: {
+                            deep: '#050614',
+                            nebula: '#0d0f2b',
+                            accent: '#6366f1',
+                            cyan: '#22d3ee',
+                        }
+                    },
+                    fontFamily: {
+                        unbounded: ['Unbounded', 'cursive'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-space-deep text-slate-100 font-outfitSelection overflow-x-hidden">
+
+    <!-- Stars Background Animation -->
+    <div class="fixed inset-0 pointer-events-none z-0">
+        <div id="stars" class="absolute inset-0"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 transition-all duration-300 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-cyan-400 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+                    </svg>
+                </div>
+                <span class="font-unbounded font-bold text-xl tracking-tighter uppercase">Discovery <span class="text-indigo-400">Planets</span></span>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex gap-8 items-center font-medium uppercase text-sm tracking-widest">
+                <a href="index.html" class="hover:text-cyan-400 transition-colors border-b-2 border-indigo-500">Accueil</a>
+                <a href="planetes.html" class="hover:text-cyan-400 transition-colors">Planètes</a>
+                <a href="about.html" class="hover:text-cyan-400 transition-colors">À Propos</a>
+                <a href="contact.html" class="hover:text-cyan-400 transition-colors px-6 py-2 bg-indigo-600 rounded-full hover:bg-indigo-500 transition-all">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Btn -->
+            <button id="mobile-menu-btn" class="md:hidden p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-space-deep z-40 hidden flex flex-col items-center justify-center gap-8 text-2xl font-unbounded">
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="planetes.html" class="nav-link">Planètes</a>
+        <a href="about.html" class="nav-link">À Propos</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent via-space-deep/50 to-space-deep"></div>
+            <!-- Mock CSS Planet -->
+            <div class="absolute -bottom-1/4 -right-1/4 w-[80vw] h-[80vw] bg-indigo-900/20 rounded-full blur-[100px] animate-pulse"></div>
+            <div class="absolute top-1/4 -left-1/4 w-[60vw] h-[60vw] bg-cyan-900/10 rounded-full blur-[100px]"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-6 max-w-5xl mx-auto">
+            <span class="inline-block py-1 px-4 mb-6 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-cyan-400 text-xs font-bold tracking-[0.3em] uppercase animate-fade-in">Aux confins du système solaire</span>
+            <h1 class="text-5xl md:text-8xl font-unbounded font-bold mb-8 leading-tight glow-text">
+                Explorez <br> <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-cyan-400 to-indigo-400">l'Infini.</span>
+            </h1>
+            <p class="text-lg md:text-xl text-slate-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+                Une immersion scientifique et pédagogique au cœur des géantes gazeuses et des mondes telluriques qui habitent notre galaxie.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a href="planetes.html" class="px-8 py-4 bg-indigo-600 hover:bg-indigo-500 rounded-full font-bold uppercase tracking-widest transition-all shadow-[0_0_20px_rgba(79,70,229,0.4)] hover:shadow-[0_0_40px_rgba(79,70,229,0.6)] group">
+                    Commencer le voyage
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 inline-block ml-2 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
+                <a href="#mission" class="font-bold uppercase tracking-widest hover:text-cyan-400 transition-colors">Notre Mission</a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+        </div>
+    </header>
+
+    <!-- Mission Section -->
+    <section id="mission" class="py-24 px-6 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <h2 class="text-4xl font-unbounded font-bold mb-8 leading-tight">Une mission pédagogique <span class="text-indigo-400">&</span> scientifique.</h2>
+                    <p class="text-slate-400 text-lg mb-6 leading-relaxed">
+                        Discovery Planets est né d'une passion pour l'astronomie et d'une volonté de rendre la science accessible à tous. Notre plateforme regroupe des données précises issues des dernières explorations spatiales (NASA, ESA).
+                    </p>
+                    <p class="text-slate-400 text-lg mb-8 leading-relaxed">
+                        De Mercure la brûlante à Neptune la glacée, chaque monde est une invitation à la découverte et à l'émerveillement.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center gap-3">
+                            <div class="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                            <span>Données scientifiques vérifiées</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                            <span>Visualisations immersives</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <div class="w-2 h-2 bg-cyan-400 rounded-full"></div>
+                            <span>Mises à jour liées aux découvertes récentes</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative reveal delay-200">
+                    <div class="aspect-square glass rounded-3xl overflow-hidden shadow-2xl relative">
+                        <!-- Pseudo-planet image or simulation -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-cyan-500/20 flex items-center justify-center p-12">
+                             <img src="images/jupiter.jpg" alt="Jupiter">
+                        </div>
+                        <div class="absolute bottom-6 left-6 right-6 p-6 glass-card rounded-2xl">
+                             <p class="text-sm font-bold uppercase tracking-widest text-indigo-400 mb-2">Le saviez-vous ?</p>
+                             <p class="text-sm">Jupiter est si massive qu'elle pourrait contenir toutes les autres planètes du système solaire deux fois.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Overview Section -->
+    <section class="py-24 px-6 bg-space-nebula/30">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <h2 class="text-4xl font-unbounded font-bold mb-4 reveal">Les Mondes du Soleil</h2>
+            <p class="text-slate-400 max-w-2xl mx-auto reveal delay-100">Huit mondes uniques, des millions de kilomètres de mystère. Explorez la diversité de notre voisinage cosmique.</p>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-7xl mx-auto">
+            <!-- Mercury -->
+            <a href="planetes/mercure.html" class="glass-card p-8 rounded-2xl text-center group reveal">
+                <img class="w-full h-[220px] object-cover rounded-xl mb-4 transition-transform duration-500 group-hover:scale-105" src="images/mercure3.jpg" alt="Mercure">
+                <h3 class="font-unbounded font-bold mb-2">Mercure</h3>
+                <span class="text-xs uppercase tracking-widest text-indigo-400">Tellurique</span>
+            </a>
+            <!-- Venus -->
+            <a href="planetes/venus.html" class="glass-card p-8 rounded-2xl text-center group reveal delay-100">
+                <img class="w-full h-[220px] object-cover rounded-xl mb-4 transition-transform duration-500 group-hover:scale-105" src="images/venus.jpg" alt="Vénus">
+                <h3 class="font-unbounded font-bold mb-2">Vénus</h3>
+                <span class="text-xs uppercase tracking-widest text-indigo-400">Tellurique</span>
+            </a>
+            <!-- Earth -->
+            <a href="planetes/terre.html" class="glass-card p-8 rounded-2xl text-center group reveal delay-200">
+                <img class="w-full h-[220px] object-cover rounded-xl mb-4 transition-transform duration-500 group-hover:scale-105" src="images/terre.jpg" alt="Terre">
+                <h3 class="font-unbounded font-bold mb-2">Terre</h3>
+                <span class="text-xs uppercase tracking-widest text-indigo-400">Tellurique</span>
+            </a>
+            <!-- Mars -->
+            <a href="planetes/mars.html" class="glass-card p-8 rounded-2xl text-center group reveal delay-300">
+                <img class="w-full h-[220px] object-cover rounded-xl mb-4 transition-transform duration-500 group-hover:scale-105" src="images/mars2.jpg" alt="Mars">
+                <h3 class="font-unbounded font-bold mb-2">Mars</h3>
+                <span class="text-xs uppercase tracking-widest text-indigo-400">Tellurique</span>
+            </a>
+        </div>
+        
+        <div class="mt-12 text-center">
+            <a href="planetes.html" class="inline-block text-cyan-400 font-bold uppercase tracking-[0.2em] hover:text-white transition-colors">
+                Voir toutes les planètes →
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-white/5 bg-space-deep">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div>
+                <span class="font-unbounded font-bold text-lg uppercase tracking-tighter">Discovery <span class="text-indigo-400">Planets</span></span>
+                <p class="text-slate-500 text-sm mt-2">© 2025 Discovery Planets - Exploration Scientifique.</p>
+            </div>
+            <div class="flex gap-8 text-sm uppercase tracking-widest text-slate-400">
+                <a href="#" class="hover:text-cyan-400 transition-colors">Données NASA</a>
+                <a href="#" class="hover:text-cyan-400 transition-colors">Mentions Légales</a>
+                <a href="contact.html" class="hover:text-cyan-400 transition-colors">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Simple Star Generator
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 200; i++) {
+            const star = document.createElement('div');
+            star.className = 'absolute bg-white rounded-full';
+            const size = Math.random() * 2;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.opacity = Math.random();
+            star.style.animation = `pulse ${Math.random() * 3 + 2}s infinite`;
+            starsContainer.appendChild(star);
+        }
+    </script>
+</body>
+</html>

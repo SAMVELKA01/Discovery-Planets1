@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercure | Discovery Planets</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        space: {
+                            deep: '#050614',
+                            nebula: '#0d0f2b',
+                            accent: '#6366f1',
+                            cyan: '#22d3ee',
+                        }
+                    },
+                    fontFamily: {
+                        unbounded: ['Unbounded', 'cursive'],
+                        outfit: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-space-deep text-slate-100 font-outfit overflow-x-hidden pt-24">
+
+    <!-- Stars Background -->
+    <div class="fixed inset-0 pointer-events-none z-0">
+        <div id="stars" class="absolute inset-0"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 nav-scrolled px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="../index.html" class="flex items-center gap-2 group">
+                <div
+                    class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-cyan-400 rounded-full flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M11 19l-7-7 7-7m8 14l-7-7 7-7" />
+                    </svg>
+                </div>
+                <span class="font-unbounded font-bold text-xl tracking-tighter uppercase">Discovery <span
+                        class="text-indigo-400">Planets</span></span>
+            </a>
+            <div class="hidden md:flex gap-8 items-center font-medium uppercase text-sm tracking-widest">
+                <a href="../index.html" class="hover:text-cyan-400 transition-colors">Accueil</a>
+                <a href="../planetes.html" class="hover:text-cyan-400 transition-colors text-cyan-400">Planètes</a>
+                <a href="../about.html" class="hover:text-cyan-400 transition-colors">À Propos</a>
+                <a href="../contact.html"
+                    class="hover:text-cyan-400 transition-colors px-6 py-2 bg-indigo-600 rounded-full hover:bg-indigo-500 transition-all">Contact</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Planet Hero -->
+    <header class="relative py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="reveal">
+                <span
+                    class="inline-block py-1 px-4 mb-4 rounded-full border border-indigo-500/30 bg-indigo-500/10 text-cyan-400 text-[10px] font-bold tracking-[0.3em] uppercase">1ère
+                    Planète | Tellurique</span>
+                <h1 class="text-6xl md:text-8xl font-unbounded font-bold mb-6 glow-text">Mercure</h1>
+                <p class="text-slate-400 text-lg leading-relaxed mb-8">
+                    Mercure est la planète la plus proche du Soleil et la plus petite du système solaire. Son absence
+                    d'atmosphère dense en fait un monde de contrastes absolus, où le jour brûle et la nuit gèle.
+                </p>
+                <div class="flex gap-4">
+                    <a href="#stats"
+                        class="px-6 py-3 bg-indigo-600 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-indigo-500 transition-all">Explorer
+                        les données</a>
+                </div>
+            </div>
+            <div class="reveal">
+                <img src="../images/mercure3.jpg" alt="Mercure" class="w-full h-auto rounded-3xl shadow-lg">
+            </div>
+    </header>
+
+    <!-- Main Data Sections -->
+    <main id="stats" class="relative z-10 max-w-7xl mx-auto px-6 py-20 space-y-32">
+
+        <!-- 1. Identification -->
+        <section class="reveal">
+            <h2 class="text-3xl font-unbounded font-bold mb-12 flex items-center gap-4">
+                <span class="text-indigo-500">01.</span> Identification Générale
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card p-8 rounded-3xl">
+                    <p class="text-slate-500 text-xs font-bold uppercase tracking-widest mb-2">Nom</p>
+                    <p class="text-2xl font-bold">Mercure</p>
+                </div>
+                <div class="glass-card p-8 rounded-3xl">
+                    <p class="text-slate-500 text-xs font-bold uppercase tracking-widest mb-2">Ordre</p>
+                    <p class="text-2xl font-bold">1ère</p>
+                </div>
+                <div class="glass-card p-8 rounded-3xl">
+                    <p class="text-slate-500 text-xs font-bold uppercase tracking-widest mb-2">Type</p>
+                    <p class="text-2xl font-bold uppercase text-indigo-400 text-lg">Tellurique</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Dimensions et Masse -->
+        <section class="reveal">
+            <h2 class="text-3xl font-unbounded font-bold mb-12 flex items-center gap-4">
+                <span class="text-indigo-500">02.</span> Dimensions & Masse
+            </h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-8 border-l border-indigo-500/30">
+                    <p class="text-slate-500 text-xs font-bold uppercase tracking-widest mb-2">Diamètre</p>
+                    <p class="text-3xl font-bold font-unbounded">4,879 <span
+                            class="text-sm font-normal text-slate-400">km</span></p>
+                </div>
+                <div class="p-8 border-l border-indigo-500/30">
+                    <p class="text-slate-500 text-xs font-bold uppercase tracking-widest mb-2">Rayon</p>
+                    <p class="text-3xl font-bold font-unbounded">2,440 <span
+                            class="text-sm font-normal text-slate-400">km</span></p>
+                </div>
+                <div class="p-8 border-l border-indigo-500/30">
+                    <p class="text-slate-500 text-xs font-bold uppercase tracking-widest mb-2">Masse</p>
+                    <p class="text-3xl font-bold font-unbounded">3.30e23 <span
+                            class="text-sm font-normal text-slate-400">kg</span></p>
+                </div>
+                <div class="p-8 border-l border-blue-500/30 bg-blue-500/5 rounded-r-3xl">
+                    <p class="text-blue-400 text-xs font-bold uppercase tracking-widest mb-2">Vs Terre</p>
+                    <p class="text-3xl font-bold font-unbounded">38<span
+                            class="text-sm font-normal text-slate-400">%</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Orbite et Mouvements -->
+        <section class="reveal">
+            <h2 class="text-3xl font-unbounded font-bold mb-12 flex items-center gap-4">
+                <span class="text-indigo-500">03.</span> Orbite & Mouvements
+            </h2>
+            <div class="glass p-12 rounded-[3rem] grid md:grid-cols-2 gap-12">
+                <div class="space-y-8">
+                    <div>
+                        <p class="text-slate-500 text-xs font-bold uppercase tracking-widest mb-4">Distance Moyenne au
+                            Soleil</p>
+                        <div class="flex items-end gap-2">
+                            <span class="text-5xl font-bold font-unbounded">57.9</span>
+                            <span class="text-lg text-slate-400 mb-2">Millions de km</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-8">
+                        <div>
+                            <p class="text-slate-500 text-xs font-bold uppercase tracking-widest mb-2">Révolution</p>
+                            <p class="text-xl font-bold">88 jours</p>
+                        </div>
+                        <div>
+                            <p class="text-slate-500 text-xs font-bold uppercase tracking-widest mb-2">Rotation</p>
+                            <p class="text-xl font-bold">58.6 jours</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-center">
+                    <div class="relative w-full h-2 bg-slate-800 rounded-full">
+                        <div
+                            class="absolute inset-y-0 left-0 w-[5%] bg-indigo-500 rounded-full shadow-[0_0_15px_rgba(99,102,241,0.5)]">
+                        </div>
+                        <div class="absolute -top-10 left-0 text-xs font-bold uppercase">Soleil</div>
+                        <div class="absolute -top-10 left-[5%] text-xs font-bold uppercase text-indigo-400">Mercure
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Température et Climat -->
+        <section class="reveal">
+            <h2 class="text-3xl font-unbounded font-bold mb-12 flex items-center gap-4">
+                <span class="text-indigo-500">04.</span> Température & Climat
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass-card p-10 rounded-3xl border-orange-500/20">
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-orange-400 font-bold uppercase tracking-widest text-xs">Jour</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-orange-400" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 3v1m0 16v1m9-9h1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M17.657 17.657l-.707-.707M6.343 6.343l-.707-.707" />
+                        </svg>
+                    </div>
+                    <p class="text-5xl font-bold mb-4 font-unbounded">430°C</p>
+                    <p class="text-slate-400 text-sm">Une chaleur insupportable due à la proximité extrême du Soleil.
+                    </p>
+                </div>
+                <div class="glass-card p-10 rounded-3xl border-cyan-500/20">
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="text-cyan-400 font-bold uppercase tracking-widest text-xs">Nuit</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-cyan-400" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+                        </svg>
+                    </div>
+                    <p class="text-5xl font-bold mb-4 font-unbounded">-180°C</p>
+                    <p class="text-slate-400 text-sm">L'absence d'atmosphère empêche la rétention de chaleur une fois le
+                        Soleil couché.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Habitabilité et Exobiologie -->
+        <section class="reveal">
+            <div class="glass p-12 rounded-[3.5rem] border-indigo-500/10">
+                <h2 class="text-3xl font-unbounded font-bold mb-8">Habitabilité & Exobiologie</h2>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <div class="prose prose-invert max-w-none text-slate-400">
+                        <p class="mb-4">
+                            Mercure est considérée comme l'un des endroits les plus hostiles à la vie telle que nous la
+                            connaissons. Le manque d'atmosphère significative signifie qu'il n'y a pas d'air à respirer
+                            et aucune protection contre les radiations solaires mortelles.
+                        </p>
+                        <p>
+                            Cependant, des traces de glace d'eau ont été découvertes dans les cratères aux pôles, là où
+                            les rayons du Soleil ne parviennent jamais. Ces zones d'"obscurité éternelle" sont les seuls
+                            endroits où des molécules organiques pourraient potentiellement subsister, bien que
+                            l'existence de vie reste hautement improbable.
+                        </p>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex gap-4 items-start">
+                            <div class="p-3 bg-red-500/10 rounded-xl text-red-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Zone Habitable</h4>
+                                <p class="text-sm text-slate-500">Hors zone (trop proche)</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-start">
+                            <div class="p-3 bg-cyan-500/10 rounded-xl text-cyan-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Présence d'eau</h4>
+                                <p class="text-sm text-slate-500">Glace aux pôles uniquement</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Navigation between planets -->
+    <section class="max-w-7xl mx-auto px-6 py-20">
+        <div class="flex justify-between items-center border-t border-white/5 pt-12">
+            <a href="#" class="flex flex-col items-start group">
+                <span class="text-xs font-bold uppercase text-slate-500 mb-2">Précédent</span>
+                <span class="text-xl font-unbounded font-bold group-hover:text-indigo-400 transition-colors">—
+                    Soleil</span>
+            </a>
+            <a href="venus.html" class="flex flex-col items-end group">
+                <span class="text-xs font-bold uppercase text-slate-500 mb-2">Suivant</span>
+                <span class="text-xl font-unbounded font-bold group-hover:text-indigo-400 transition-colors">Vénus
+                    →</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-white/5 bg-space-deep relative z-10">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div>
+                <span class="font-unbounded font-bold text-lg uppercase tracking-tighter">Discovery <span
+                        class="text-indigo-400">Planets</span></span>
+                <p class="text-slate-500 text-sm mt-2">© 2025 Discovery Planets - Exploration Scientifique.</p>
+            </div>
+            <div class="flex gap-8 text-sm uppercase tracking-widest text-slate-400">
+                <a href="../index.html" class="hover:text-cyan-400 transition-colors">Accueil</a>
+                <a href="../about.html" class="hover:text-cyan-400 transition-colors">À Propos</a>
+                <a href="../contact.html" class="hover:text-cyan-400 transition-colors">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+    <script>
+        // Simple Star Generator
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 200; i++) {
+            const star = document.createElement('div');
+            star.className = 'absolute bg-white rounded-full';
+            const size = Math.random() * 2;
+            star.style.width = `${size}px`;
+            star.style.height = `${size}px`;
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.opacity = Math.random();
+            star.style.animation = `pulse ${Math.random() * 3 + 2}s infinite`;
+            starsContainer.appendChild(star);
+        }
+    </script>
+</body>
+
+</html>
