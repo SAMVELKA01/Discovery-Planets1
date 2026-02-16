@@ -4,7 +4,7 @@
 Discovery Planets est une plateforme web immersive dédiée à l'exploration spatiale et à la découverte de notre systeme solaire. Ce projet combine design moderne, contenu educatif et interactivite pour offrir une experience unique d'apprentissage de l'astronomie.
 
 ## ✨ Apercu du site
-🔗 [Voir la demo en ligne](https://samvelka01.github.io/Discovery-Planets/)
+🔗 [Voir la demo en ligne](https://samvelka01.github.io/Discovery-Planets1/)
 
 ## ✨ Fonctionnalites Principales
 
